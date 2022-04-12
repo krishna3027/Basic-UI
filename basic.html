@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>krish</title>
+        <link href="" rel="stylesheet">
+    </head>
+    <style>
+       @import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700');
+
+body {
+    background-color: black;
+    
+}
+
+img {
+    margin: 5px;
+    width: fit-content;
+}
+
+.one{
+     text-align: center;
+}
+
+div>img {
+    border-radius: 25px;
+}
+
+.navbar {
+    width:100%;
+    flex-direction: column;
+    display: flex;
+    border: none;
+    color: aliceblue;
+    background-color: black;
+}
+
+ul {
+    display: flex;
+    font-size: larger;
+    font-style: none;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+button {
+
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: large;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 4px; 
+}
+
+button:hover{
+    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+    animation:slidebg 5s linear infinite;
+}
+
+@keyframes slidebg {
+    to {
+      background-position:20vw;
+    }
+  }
+
+
+
+.search{
+    text-align: center;
+    margin-top: 25px;
+}
+
+input{
+    width: 35%;
+}
+
+.search_input {
+    background-color:black;
+}
+
+.search_input:hover{
+    background-color: aqua;
+    color:greenyellow
+}
+
+#profile-pic{
+    border-radius: 50%;
+    width: 200px;
+    height: auto;
+
+}
+
+.profile {
+    color: antiquewhite;
+    text-align: center;
+}
+
+.search,.profile {
+    display: none;
+} 
+    </style>
+    <body>
+        <div class="navbar">
+            <ul>
+                <li><button class="home-button">Home</button></li>
+                <li><button class="search-button">Search</button></li>
+                <li><button class="profile-button">Profile</button></li>
+            </ul>
+        </div>
+
+
+        <section class="Home">
+            <div class="one">
+                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bW9kZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="a pic" />
+                
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bW9kZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="pic" />
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bW9kZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="pic 3" />
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bW9kZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="pic 4"/>
+            </div> 
+        </section>
+
+
+        <section class="search">
+            <div>
+                <input type = text>
+                <button class="search_input" >search</button>
+            </div>
+        </section> 
+
+        <section class="profile">
+            <div>
+                <img id="profile-pic" src="https://images.unsplash.com/photo-1583766395091-2eb9994ed094?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="profile pic">
+                <h1>profile pic</h1>
+            </div>
+        </section>
+
+    </body>
+    <script >
+        let homeButton = document.querySelector(".home-button")
+let searchButton = document.querySelector(".search-button")
+let profileButton = document.querySelector(".profile-button")
+let home = document.querySelector(".Home")
+let search = document.querySelector(".search")
+let one = document.querySelector(".one")
+let profile = document.querySelector(".profile")
+
+
+homeButton.addEventListener("click",function(){
+    home.style.display = "block";
+    search.style.display = "none";
+    profile.style.display = "none";
+} )
+
+searchButton.addEventListener("click",function(){
+    home.style.display = "none";
+    search.style.display = "block";
+    profile.style.display = "none";
+} )
+
+profileButton.addEventListener("click",function(){
+    home.style.display = "none";
+    search.style.display = "none";
+    profile.style.display = "block";
+} )
+
+
+    </script>
+</html>
